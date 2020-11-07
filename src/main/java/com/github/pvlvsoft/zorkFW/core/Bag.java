@@ -11,6 +11,8 @@ import com.github.pvlvsoft.zorkFW.core.item.Item;
  * <p>The bag may be restricted for use - while there are too many items or their sum of the
  * weight is too big, the bag won't be able to let them inside.</p>
  *
+ * <p>There may be more {@link Bag} instances for the {@link Player}.</p>
+ *
  * @version 2020-11-07
  * @author Vojtech Pavlu
  */
