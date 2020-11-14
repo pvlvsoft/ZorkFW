@@ -1,4 +1,6 @@
-package com.github.pvlvsoft.zorkFW.core;
+package com.github.pvlvsoft.zorkFW.core.game;
+
+import com.github.pvlvsoft.zorkFW.core.world.World;
 
 import java.util.List;
 

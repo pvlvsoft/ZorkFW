@@ -1,6 +1,7 @@
-package com.github.pvlvsoft.zorkFW.core;
+package com.github.pvlvsoft.zorkFW.core.world;
 
 
+import com.github.pvlvsoft.zorkFW.core.Room;
 import com.github.pvlvsoft.zorkFW.core.player.Player;
 
 import java.util.List;

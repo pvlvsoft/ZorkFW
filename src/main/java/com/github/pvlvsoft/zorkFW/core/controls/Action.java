@@ -3,6 +3,7 @@ package com.github.pvlvsoft.zorkFW.core.controls;
 
 import com.github.pvlvsoft.zorkFW.core.Room;
 import com.github.pvlvsoft.zorkFW.core.item.Item;
+import com.github.pvlvsoft.zorkFW.core.player.Player;
 
 /**
  * <p>This interface defines the same base of all controlled actions

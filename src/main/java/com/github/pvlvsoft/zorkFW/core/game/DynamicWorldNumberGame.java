@@ -1,5 +1,7 @@
-package com.github.pvlvsoft.zorkFW.core;
+package com.github.pvlvsoft.zorkFW.core.game;
 
+
+import com.github.pvlvsoft.zorkFW.core.world.World;
 
 /**
  * <p>This interface defines the tools for managing a dynamic number of {@link World}s in the {@link Game}.

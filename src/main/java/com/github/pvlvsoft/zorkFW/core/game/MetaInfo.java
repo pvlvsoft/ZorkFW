@@ -1,4 +1,4 @@
-package com.github.pvlvsoft.zorkFW.core;
+package com.github.pvlvsoft.zorkFW.core.game;
 
 public interface MetaInfo {
 
