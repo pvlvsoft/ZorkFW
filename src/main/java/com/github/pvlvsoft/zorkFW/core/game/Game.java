@@ -9,7 +9,7 @@ package com.github.pvlvsoft.zorkFW.core.game;
  *
  * <p>This interface is hidden to general usage. That's because it
  * should be used just to specify basic {@code bridge} ancestor for
- * others. The extending interface to use is (for example) {@link MultiworldGame}.</p>
+ * others. The extending interface to use is (for example) {@link MultiWorldGame}.</p>
  *
  * @version 2020-11-5
  * @author Vojtech Pavlu

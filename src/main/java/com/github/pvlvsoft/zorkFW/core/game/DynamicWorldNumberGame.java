@@ -10,7 +10,7 @@ import com.github.pvlvsoft.zorkFW.core.world.World;
  * @version 2020-11-07
  * @author Vojtech Pavlu
  */
-public interface DynamicWorldNumberGame extends MultiworldGame {
+public interface DynamicWorldNumberGame extends MultiWorldGame {
 
 
     /**

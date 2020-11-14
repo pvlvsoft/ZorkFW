@@ -13,14 +13,14 @@ import java.util.List;
  * @version 2020-11-06
  * @author Vojtech Pavlu
  */
-public interface MultiworldGame extends Game {
+public interface MultiWorldGame extends Game {
 
     /**
      * <p>The other way of managing the game locations to {@link SingleWorldGame#getWorld()}.
      * This one provides returning <b>all</b> the worlds in the game, while the {@link SingleWorldGame}
      * accepts the one {@link World} only.</p>
      *
-     * @return  {@link List} of all the {@link World}s in the {@link MultiworldGame}.
+     * @return  {@link List} of all the {@link World}s in the {@link MultiWorldGame}.
      */
     public List<World> getWorlds();
 

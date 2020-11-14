@@ -1,4 +1,4 @@
-package com.github.pvlvsoft.zorkFW.utils.errors;
+package com.github.pvlvsoft.zorkFW.core.utils.errors;
 
 
 /**
@@ -10,7 +10,7 @@ package com.github.pvlvsoft.zorkFW.utils.errors;
  * @author Vojtech Pavlu
  * @version 2020-11-14
  *
- * @see com.github.pvlvsoft.zorkFW.utils.errors.GameConsistencyError
+ * @see com.github.pvlvsoft.zorkFW.core.utils.errors.GameConsistencyError
  * @see com.github.pvlvsoft.zorkFW.core.player.Player
  * @see com.github.pvlvsoft.zorkFW.core.game
  * @see com.github.pvlvsoft.zorkFW.core.item.Item

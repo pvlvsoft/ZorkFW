@@ -10,9 +10,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * <p></p>
+ * <p>This {@code abstract} class provides a {@link List}-formed {@link Room} container as a default.
+ * It's meant to be a static container, which means it should not be changed during the game.
+ * It also provides a default room reference - in order to return the <i>spawn place</i>.</p>
  *
- * <p></p>
  *
  * @author Vojtech Pavlu
  * @version 2020-11-14

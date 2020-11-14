@@ -1,7 +1,7 @@
 package com.github.pvlvsoft.zorkFW.core.game;
 
 import com.github.pvlvsoft.zorkFW.core.player.Player;
-import com.github.pvlvsoft.zorkFW.utils.errors.AlreadyInTheGameException;
+import com.github.pvlvsoft.zorkFW.core.utils.errors.AlreadyInTheGameException;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public interface MultiPlayerGame {
     /**
      * <p>Returns a list of players currently in the game.</p>
      *
-     * @return  {@link List} of {@link Player}s the {@link Game} has at the time.
+     * @return  {@link List} of {@link Player}s the {@link MultiPlayerGame} has at the time.
      */
     public List<Player> getPlayers();
 
