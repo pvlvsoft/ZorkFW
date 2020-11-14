@@ -31,5 +31,4 @@ public interface Bag extends ItemContainer {
      *              put inside or not.
      */
     public boolean doesItFit(Item item);
-
 }
