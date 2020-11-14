@@ -1,6 +1,6 @@
 package com.github.pvlvsoft.zorkFW.core.item;
 
-import com.github.pvlvsoft.zorkFW.core.WeightRestrictedBag;
+import com.github.pvlvsoft.zorkFW.core.bag.WeightRestrictedBag;
 
 public interface ItemWithWeight extends Item {
 

@@ -1,5 +1,6 @@
 package com.github.pvlvsoft.zorkFW.core;
 
+import com.github.pvlvsoft.zorkFW.core.bag.Bag;
 import com.github.pvlvsoft.zorkFW.core.item.Item;
 
 import java.util.List;
@@ -61,5 +62,5 @@ public interface ItemContainer {
     /**
      * <p>Removes all the {@link Item}s from the container.</p>
      */
-    public void clear();
+    public void clearItems();
 }

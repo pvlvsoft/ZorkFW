@@ -1,6 +1,8 @@
-package com.github.pvlvsoft.zorkFW.core;
+package com.github.pvlvsoft.zorkFW.core.bag;
 
 
+import com.github.pvlvsoft.zorkFW.core.ItemContainer;
+import com.github.pvlvsoft.zorkFW.core.player.Player;
 import com.github.pvlvsoft.zorkFW.core.item.Item;
 
 /**

@@ -1,11 +1,11 @@
 package com.github.pvlvsoft.zorkFW.core;
 
-public interface SingleWorldGame {
+public interface SingleWorldGame extends Game {
 
     /**
-     * <p>Returns the only {@link World} instance reference the {@link Game} has.</p>
+     * <p>Returns the only {@link World} instance reference this game has.</p>
      *
-     * @return  the {@link World} the {@link Game} is in.
+     * @return  the {@link World} this game is in.
      */
     public World getWorld();
 }

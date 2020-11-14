@@ -1,5 +1,7 @@
 package com.github.pvlvsoft.zorkFW.core;
 
+import com.github.pvlvsoft.zorkFW.core.player.Player;
+
 import java.util.List;
 
 public interface Room extends ItemContainer {
@@ -13,6 +15,28 @@ public interface Room extends ItemContainer {
      *          - where is possible to go from here.
      */
     public List<Room> getNeighbors();
+
+
+    /**
+     * <p>Adds {@link Room} to the list of neighbors. It means the given room is gonna
+     * be "next to this one".</p>
+     *
+     * <p>Take care of checking, if it is not already contained. If it is not checked,
+     * it may lead to {@link StackOverflowError}.</p>
+     *
+     * @param room  to be added as a neighbor
+     */
+    public void addNeighbor(Room room);
+
+
+
+    /**
+     * <p>Removes the given {@link Room} of the list of neighbors. It means the given
+     * room won't be "next to this one" anymore.</p>
+     *
+     * @param room  to be removed from the list of neighbors
+     */
+    public void removeNeighbor(Room room);
 
 
 
@@ -86,4 +110,13 @@ public interface Room extends ItemContainer {
      * @return  {@code true} when there is a player only. Otherwise it returns {@code false}.
      */
     public boolean isPlayerInside();
+
+
+    /**
+     * <p>Returns default message the {@link Room} introduces itself.</p>
+     *
+     * @return  the {@link String}-formed message the {@link Room}
+     *          uses for describing itself.
+     */
+    public String getDefaultMessage();
 }

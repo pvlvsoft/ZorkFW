@@ -2,7 +2,8 @@ package com.github.pvlvsoft.zorkFW.core.item;
 
 
 
-import com.github.pvlvsoft.zorkFW.core.Bag;
+import com.github.pvlvsoft.zorkFW.core.bag.Bag;
+import org.example.identify.instances.Named;
 
 
 /**
@@ -12,7 +13,7 @@ import com.github.pvlvsoft.zorkFW.core.Bag;
  * @version 2020-11-07
  * @author Vojtech Pavlu
  */
-public interface Item {
+public interface Item extends Named {
 
 
     /**

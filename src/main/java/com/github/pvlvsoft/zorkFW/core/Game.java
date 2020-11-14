@@ -1,8 +1,6 @@
 package com.github.pvlvsoft.zorkFW.core;
 
 
-import com.github.pvlvsoft.zorkFW.utils.Describable;
-
 /**
  * <p>This interface defines the basic {@code Game} environment.</p>
  *
@@ -16,7 +14,7 @@ import com.github.pvlvsoft.zorkFW.utils.Describable;
  * @version 2020-11-5
  * @author Vojtech Pavlu
  */
-interface Game extends Describable {
+interface Game {
 
 
     /**

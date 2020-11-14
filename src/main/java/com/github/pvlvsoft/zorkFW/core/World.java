@@ -1,7 +1,7 @@
 package com.github.pvlvsoft.zorkFW.core;
 
 
-import com.github.pvlvsoft.zorkFW.utils.Describable;
+import com.github.pvlvsoft.zorkFW.core.player.Player;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
  * @version 2020-11-06
  * @author Vojtech Pavlu
  */
-public interface World extends Describable {
+public interface World {
 
 
     /**
