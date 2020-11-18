@@ -1,11 +1,9 @@
 package com.github.pvlvsoft.zorkFW.components.room;
 
 
-import com.github.pvlvsoft.zorkFW.core.ItemContainer;
 import com.github.pvlvsoft.zorkFW.core.Room;
 import com.github.pvlvsoft.zorkFW.core.item.Item;
 import com.github.pvlvsoft.zorkFW.core.player.Player;
-import com.github.pvlvsoft.zorkFW.testImpl.actions.AbstractAction;
 import org.example.identify.instances.Named;
 import org.example.identify.instances.Recognisable;
 import org.example.identify.recognizers.RecognitionInstrument;
@@ -14,9 +12,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p></p>
+ * <p>This {@code abstract} class is representing a basic {@link Room} definition. It's implementing
+ * the interface of {@link Room} to have a callable functions, such as neighbor management.</p>
  *
- * <p></p>
+ * <p>This class does not have {@link Item}s management and {@link Player}s management implemented.
+ * The reason is basically because the implementor should decide how the items addition (and removing)
+ * will be done, but it's strictly recommended to be done with check of uniqueness of the elements.</p>
+ *
+ * <p>Similarly, the player management depends on if the implementor decides to create the game as
+ * {@link com.github.pvlvsoft.zorkFW.core.game.MultiPlayerGame} version or the
+ * {@link com.github.pvlvsoft.zorkFW.core.game.SinglePlayerGame} version. This defines the further
+ * means of the game and further intentions. Implementation of these tools inside this class should
+ * not restrict the usability of this instances.</p>
  *
  * @author Vojtech Pavlu
  * @version 2020-11-18
@@ -28,8 +35,6 @@ public abstract class AbstractRoom implements Room, Named {
     /* ****************************************************************************************/
     /* INSTANCE VARIABLES *********************************************************************/
 
-
-    private List<Item> items = new ArrayList<>();
     private List<Room> neighbors = new ArrayList<>();
 
     private String name;
@@ -91,18 +96,6 @@ public abstract class AbstractRoom implements Room, Named {
     /* ****************************************************************************************/
     /* INSTANCE METHODS ***********************************************************************/
 
-    /**
-     * <p>Returns neighbors of this room. They are formatted
-     * as a list for easier use.</p>
-     *
-     * @return the {@link List} of all neighbors of this room
-     * - where is possible to go from here.
-     */
-    @Override
-    public List<Room> getNeighbors() {
-
-        return this.neighbors;
-    }
 
     /**
      * <p>Adds {@link Room} to the list of neighbors. It means the given room is gonna
@@ -135,11 +128,6 @@ public abstract class AbstractRoom implements Room, Named {
         this.neighbors.remove(room);
     }
 
-    @Override
-    public String getName() {
-
-        return this.name;
-    }
 
     @Override
     public boolean hasSameName(Named named) {
@@ -153,17 +141,6 @@ public abstract class AbstractRoom implements Room, Named {
         return this.getName().equals(s);
     }
 
-    @Override
-    public boolean isUniqueIdentifier() {
-
-        return false;
-    }
-
-    @Override
-    public RecognitionInstrument getInstrument() {
-
-        throw new RuntimeException("Not implemented!");
-    }
 
     @Override
     public boolean corresponds(Recognisable recognisable) {
@@ -176,16 +153,6 @@ public abstract class AbstractRoom implements Room, Named {
         return false;
     }
 
-    /**
-     * <p>Returns number of neighbors of this place.</p>
-     *
-     * @return {@code int} formed number of the neighbors.
-     */
-    @Override
-    public int getNumberOfNeighbors() {
-
-        return this.neighbors.size();
-    }
 
     /**
      * <p>Returns the basic {@code boolean}-formed information
@@ -199,6 +166,19 @@ public abstract class AbstractRoom implements Room, Named {
 
         return this.neighbors.size() > 0;
     }
+
+
+
+    /* ****************************************************************************************/
+    /* STATIC METHODS *************************************************************************/
+
+
+
+
+    /* ****************************************************************************************/
+    /* GETTERS AND SETTERS ********************************************************************/
+
+
 
     /**
      * <p>Returns {@code boolean}-formed information if is or is not the
@@ -215,39 +195,49 @@ public abstract class AbstractRoom implements Room, Named {
 
 
     /**
-     * <p>The {@link ItemContainer} has to be able to return all the {@link Item}s inside.</p>
+     * <p>Returns number of neighbors of this place.</p>
      *
-     * @return {@link List} of {@link Item}s contained in this container
+     * @return {@code int} formed number of the neighbors.
      */
     @Override
-    public List<Item> getItems() {
+    public int getNumberOfNeighbors() {
 
-        return this.items;
+        return this.neighbors.size();
     }
+
+
+    @Override
+    public boolean isUniqueIdentifier() {
+
+        return false;
+    }
+
+    @Override
+    public RecognitionInstrument getInstrument() {
+
+        throw new RuntimeException("Not implemented!");
+    }
+
 
     /**
-     * <p>This method gives back the number of {@link Item}s in the container.</p>
+     * <p>Returns neighbors of this room. They are formatted
+     * as a list for easier use.</p>
      *
-     * @return the {@code int}-formed size of the container.
+     * @return the {@link List} of all neighbors of this room
+     * - where is possible to go from here.
      */
     @Override
-    public int getNumberOfItems() {
+    public List<Room> getNeighbors() {
 
-        return this.items.size();
+        return this.neighbors;
     }
 
 
-    /* ****************************************************************************************/
-    /* STATIC METHODS *************************************************************************/
+    @Override
+    public String getName() {
 
-
-
-
-    /* ****************************************************************************************/
-    /* GETTERS AND SETTERS ********************************************************************/
-
-
-
+        return this.name;
+    }
 
 
     /* ****************************************************************************************/
