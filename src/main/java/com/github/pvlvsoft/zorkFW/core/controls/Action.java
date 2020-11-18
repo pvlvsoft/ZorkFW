@@ -28,4 +28,11 @@ public interface Action {
      * (ie it's own way of doing the action).</p>
      */
     public void execute();
+
+
+    /**
+     * <p>This method is meant to be used for letting the </p>
+     * @return
+     */
+    public Player getPlayer();
 }
